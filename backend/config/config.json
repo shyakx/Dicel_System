@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "0123",
+    "database": "dicel_erp_production",
+    "host": "localhost",
+    "port": 5434,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "0123",
+    "database": "dicel_erp_test",
+    "host": "localhost",
+    "port": 5434,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "0123",
+    "database": "dicel_erp_production",
+    "host": "localhost",
+    "port": 5434,
+    "dialect": "postgres"
+  }
+}
