@@ -66,7 +66,7 @@ const Dashboard = () => {
   if (error || !analytics) return <Box sx={{ color: 'error.main', textAlign: 'center', mt: 6 }}>{error || 'No data'}</Box>;
 
   return (
-    <div className="main-content" style={{ maxWidth: 1200, margin: '0 auto', marginTop: 70 }}>
+    <div className="main-content" style={{ maxWidth: 1200, margin: '0 auto' }}>
       <Grid container spacing={3} justifyContent="center">
         {/* Employees Card */}
         <Grid item xs={12} md={4}>
@@ -129,50 +129,6 @@ const Dashboard = () => {
             <Typography color="text.secondary">Paid: {analytics.invoices.paid}</Typography>
             <Typography color="text.secondary">Unpaid: {analytics.invoices.unpaid}</Typography>
             <Typography color="text.secondary">Overdue: {analytics.invoices.overdue}</Typography>
-          </Paper>
-        </Grid>
-        {/* Departments Card */}
-        <Grid item xs={12} md={4}>
-          <Paper className="card" elevation={3}>
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <PeopleIcon sx={{ fontSize: 40, color: '#06b6d4', mr: 2 }} />
-              <Typography variant="h6">Departments</Typography>
-            </Box>
-            <Typography variant="h4" fontWeight={700}>{analytics.employees.byDepartment.length}</Typography>
-            <Typography color="text.secondary">Total Departments</Typography>
-          </Paper>
-        </Grid>
-        {/* Active Assets Card */}
-        <Grid item xs={12} md={4}>
-          <Paper className="card" elevation={3}>
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <InventoryIcon sx={{ fontSize: 40, color: '#22c55e', mr: 2 }} />
-              <Typography variant="h6">Active Assets</Typography>
-            </Box>
-            <Typography variant="h4" fontWeight={700}>{analytics.assets.byStatus.find(s => s.status.toLowerCase() === 'active')?.count || 0}</Typography>
-            <Typography color="text.secondary">Currently Active</Typography>
-          </Paper>
-        </Grid>
-        {/* Overdue Invoices Card */}
-        <Grid item xs={12} md={4}>
-          <Paper className="card" elevation={3}>
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <ReceiptIcon sx={{ fontSize: 40, color: '#f59e42', mr: 2 }} />
-              <Typography variant="h6">Overdue Invoices</Typography>
-            </Box>
-            <Typography variant="h4" fontWeight={700}>{analytics.invoices.overdue}</Typography>
-            <Typography color="text.secondary">Invoices Overdue</Typography>
-          </Paper>
-        </Grid>
-        {/* Total Contracts Card */}
-        <Grid item xs={12} md={4}>
-          <Paper className="card" elevation={3}>
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <BusinessIcon sx={{ fontSize: 40, color: '#a855f7', mr: 2 }} />
-              <Typography variant="h6">Total Contracts</Typography>
-            </Box>
-            <Typography variant="h4" fontWeight={700}>{analytics.clients.activeContracts + analytics.clients.expiredContracts}</Typography>
-            <Typography color="text.secondary">All Contracts</Typography>
           </Paper>
         </Grid>
         {/* Employees by Department Pie Chart */}
