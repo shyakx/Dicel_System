@@ -88,7 +88,7 @@ const Employees = () => {
   if (error) return <Alert severity="error">{error}</Alert>;
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 1000, mx: 'auto', mt: 4 }}>
+    <Box sx={{ width: '100%', maxWidth: 1000, mx: 'auto', mt: 9 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h4" fontWeight={700} color="primary">
           Employee Management
@@ -99,7 +99,7 @@ const Employees = () => {
           </Button>
         )}
       </Box>
-      <TableContainer component={Paper} sx={{ borderRadius: 3, boxShadow: 2 }}>
+      <TableContainer component={Paper} sx={{ borderRadius: 3, boxShadow: 2, mx: 'auto' }}>
         <Table>
           <TableHead>
             <TableRow>

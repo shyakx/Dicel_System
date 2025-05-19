@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
+import { CustomThemeProvider } from './contexts/ThemeContext';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Box } from '@mui/material';
 import theme from './theme';
@@ -19,8 +19,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <CustomThemeProvider>
       <AuthProvider>
         <Router>
           <Routes>
@@ -101,7 +100,7 @@ const App = () => {
           </Routes>
         </Router>
       </AuthProvider>
-    </ThemeProvider>
+    </CustomThemeProvider>
   );
 };
 

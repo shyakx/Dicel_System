@@ -1,7 +1,7 @@
 import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
 
 const Reports = () => (
-  <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', mt: 4 }}>
+  <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', mt: 9 }}>
     <Typography variant="h4" fontWeight={700} mb={3} color="primary">
       Reports & Analytics
     </Typography>

@@ -6,7 +6,7 @@ const logs = [
 ];
 
 const AuditLogs = () => (
-  <Box sx={{ width: '100%', maxWidth: 1000, mx: 'auto', mt: 4 }}>
+  <Box sx={{ width: '100%', maxWidth: 1000, mx: 'auto', mt: 9 }}>
     <Typography variant="h4" fontWeight={700} mb={3} color="primary">
       Audit Logs
     </Typography>
